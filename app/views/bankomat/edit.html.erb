@@ -1,0 +1,25 @@
+<h1>Депозиты и переводы</h1>
+ <%= form_with url: update_bankomat_path(@bankomat), method: :post do |form|%>
+ <%= form.submit 'Перевести' %>
+ <%= form.number_field :rating %><br>
+  <% end %>
+ <br>
+<p>
+  <strong>ФИО клиента:</strong>
+  <%= @bankomat.name %>
+</p>
+ 
+<p>
+  <strong>Пароль:</strong>
+  <%= @bankomat.password %>
+</p>
+<p>
+  <strong>Номер карты:</strong>
+  <%= @bankomat.number %>
+</p>
+<p>
+  <strong>Баланс:</strong>
+  <%= @bankomat.balance %><br>
+</p>
+
+<%= link_to 'Назад', bankomat_index_url %>

@@ -1,0 +1,27 @@
+<h1>Приветствуем в банке ОАО "Банк"</h1>
+<br>
+
+<%= link_to 'Завести счет', new_bankomat_path %>
+<table>
+  <tr>
+    <th>Клиент</th>
+    <th>Пароль</th>
+    <th>Номер карты</th>
+    <th>Баланс</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @bankomats.each do |article| %>
+    <tr>
+      <td><%= article.name %></td>
+      <td><%= article.password %></td>
+       <td><%= article.number %></td>
+        <td><%= article.balance %></td>
+      <td><%= link_to 'Посмотреть профиль', bankomat_path(article) %></td>
+      <td><%= link_to 'Провести операции', edit_bankomat_path(article) %></td>
+      <td><%= link_to 'Удалить счет', bankomat_path(article),
+              method: :delete,
+              data: { confirm: 'Подтвердите удаление' } %></td>
+    </tr>
+  <% end %>
+</table>

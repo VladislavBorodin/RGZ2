@@ -1,0 +1,3 @@
+class Bankomat < ApplicationRecord
+ 
+end

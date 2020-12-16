@@ -1,0 +1,5 @@
+{
+  "username":"testUser",
+  "password":"testPass",
+  "authorities":["TEST1", "TEST2"]
+}

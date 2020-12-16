@@ -1,0 +1,21 @@
+<h1>Список работ</h1>
+<%= link_to 'Добавить работу', new_article_path %>
+<table>
+  <tr>
+    <th>Заголовок</th>
+    <th>Содержание</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Оценить', article_path(article) %></td>
+      <td><%= link_to 'Изменить', edit_article_path(article) %></td>
+      <td><%= link_to 'Удалить', article_path(article),
+              method: :delete,
+              data: { confirm: 'Действительно?' } %></td>
+    </tr>
+  <% end %>
+</table>

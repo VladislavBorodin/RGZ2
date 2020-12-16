@@ -1,0 +1,19 @@
+<h1>Депозиты и переводы</h1>
+
+<p>
+  <strong>ФИО клиента:</strong>
+  <%= @bankomat.name %>
+</p>
+ <p>
+  <strong>пароль аккаунта:</strong>
+  <%= @bankomat.password %>
+</p>
+<p>
+  <strong>номер карты:</strong>
+  <%= @bankomat.number %>
+</p>
+<p>
+  <strong>баланс:</strong>
+  <%= @bankomat.balance %><br>
+</p>
+<%= link_to 'Переход в систему', bankomat_index_url %>

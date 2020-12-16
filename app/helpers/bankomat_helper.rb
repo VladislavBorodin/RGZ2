@@ -1,0 +1,2 @@
+module BankomatHelper
+end

@@ -1,0 +1,2 @@
+class BankomatsController < ApplicationController
+end
